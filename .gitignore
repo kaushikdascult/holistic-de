@@ -1,0 +1,17 @@
+# Internal Project Planning & Progress Logs
+[pP][lL][aA][nN].md
+[pP][rR][oO][gG][rR][eE][sS][sS].md
+*.tmp
+*.log
+
+# OS & Environment
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Global Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

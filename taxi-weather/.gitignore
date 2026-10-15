@@ -1,0 +1,14 @@
+# Embedded DuckDB Database
+*.duckdb
+*.duckdb.wal
+
+# Local Datasets & Caches
+data/
+*.parquet
+*.csv
+*.json
+
+# Cache
+.pytest_cache/
+.ruff_cache/
+__pycache__/

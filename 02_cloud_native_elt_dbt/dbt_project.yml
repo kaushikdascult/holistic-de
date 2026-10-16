@@ -1,0 +1,21 @@
+name: 'taxi_weather_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'taxi_weather_dbt'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "warehouse.duckdb"
+
+models:
+  taxi_weather_dbt:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

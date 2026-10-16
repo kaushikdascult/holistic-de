@@ -1,0 +1,15 @@
+version: 2                                                                                                                                             
+                                                                                                                                                        
+sources:                                                                                                                                               
+  - name: raw_lakehouse                                                                                                                                
+    description: "Raw landing zone parquet and JSON artifacts"                                                                                         
+    tables:                                                                                                                                            
+      - name: raw_taxi                                                                                                                                 
+        meta:                                                                                                                                          
+          external_location: "../01_embedded_duckdb_sql/data/raw/taxi/yellow_tripdata_2026-01.parquet"                                                 
+        description: "Raw monthly NYC TLC yellow taxi trip data"                                                                                       
+                                                                                                                                                        
+      - name: raw_weather                                                                                                                              
+        meta:                                                                                                                                          
+          external_location: "../01_embedded_duckdb_sql/data/raw/weather/weather_2026-01.json"                                                         
+        description: "Raw Open-Meteo hourly weather JSON archive"

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_taxi_trips_cleaned
+    description: "Silver layer containing 100% valid NYC yellow taxi records passing all 8 DQ gates"
+    columns:
+      - name: fare_amount
+        tests:
+          - not_null
+      - name: trip_duration_minutes
+        tests:
+          - not_null
+      - name: pickup_location_id
+        tests:
+          - not_null
+
+  - name: fct_hourly_zone_weather_metrics
+    description: "Gold mart: aggregated hourly demand metrics enriched with weather features"
+    columns:
+      - name: pickup_hour
+        tests:
+          - not_null
+      - name: pickup_zone
+        tests:
+          - not_null
+      - name: trip_count
+        tests:
+          - not_null
